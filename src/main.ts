@@ -8,7 +8,7 @@ let b = a as Two // less specific
 let c = a as Three // more specific
 
 let d = <One>'world'
-let d = <string | number>'world'
+let e = <string | number>'world'
 
 const addOrConcat = (a: number, b: number, c: 'add' | 'concat'): number | string => {
   if (c === 'add') return a + b
@@ -23,4 +23,10 @@ let nextVal: number = addOrConcat(2, 2, 'concat') as number
 // 10 as string - error
 (10 as unknown) as string // double casting
 
-//1:53:21
+// The DOM
+const img = document.querySelector('img')!
+const myImg = document.getElementById('#img') as HTMLImageElement
+const nextImg = <HTMLImageElement>document.getElementById('#img')
+
+img.src
+myImg.src
