@@ -87,6 +87,20 @@ const greetGuitarist = (guitarist: Guitarist) => {
 
 console.log(greetGuitarist(jp))
 
+// Enums
+
+enum Grade {
+  U = 1,
+  D,
+  C,
+  B,
+  A,
+}
+
+console.log(Grade.U)
+
+
+
 
 
 
