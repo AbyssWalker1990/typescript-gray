@@ -19,3 +19,25 @@ guitars = stringArr
 mixedData = guitars
 
 let test = []
+let bards: string[] = []
+bards.push('Van Helen')
+// bards.push(true) - error
+
+// Tuple
+let myTuple: [string, number, boolean] = ['Vova', 33, true]
+
+let mixed = ['John', 1, false]
+
+mixed = myTuple
+// myTuple = mixed - error
+// myTuple[3] = 42 - error
+myTuple[1] = 10
+
+/////////////////////////////////////////
+// Objects
+
+
+
+
+
+
