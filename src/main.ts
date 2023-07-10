@@ -1,3 +1,5 @@
+import { BADHINTS } from "dns"
+
 let stringArr = ['one', 'hey', 'Vova']
 
 let guitars = ['Strat', 'Les Paul', 5190]
@@ -35,6 +37,55 @@ myTuple[1] = 10
 
 /////////////////////////////////////////
 // Objects
+let myObj: object
+myObj = []
+console.log(typeof myObj)
+myObj = bards
+myObj = {}
+
+const exampleObj = { // inferred data types
+  prop1: 'Vova',
+  prop2: true
+}
+
+// exampleObj.prop2 = 42 - error
+exampleObj.prop2 = false
+exampleObj.prop1 = 'John'
+
+type Guitarist = {
+  name?: string,
+  active?: boolean, // optional
+  albums: (string | number)[]
+}
+
+// interface Guitarist {
+//   name: string,
+//   active?: boolean, // optional
+//   albums: (string | number)[]
+// }
+
+let evh: Guitarist = {
+  name: 'Eddie',
+  active: false,
+  albums: [1984, 5150, 'OU812']
+}
+
+let jp: Guitarist = {
+  name: 'Jimmy',
+  albums: ['I', 'II', 'IV']
+}
+
+evh = jp
+// evh.years = 40 - error, cant add new proprty
+
+const greetGuitarist = (guitarist: Guitarist) => {
+  if (guitarist.name) {
+    return `Hello ${guitarist.name.toUpperCase()}!`
+  }
+  return 'Hello'
+}
+
+console.log(greetGuitarist(jp))
 
 
 
