@@ -67,3 +67,37 @@ logMessage(addAll(2, 3, 3))
 logMessage(addAll(2, 3))
 logMessage(sumAll(2, 3))
 logMessage(sumAll(undefined, 3))
+
+// Rest Parameters
+
+const total = (...nums: number[]): number => {
+  return nums.reduce((prev, curr) => prev + curr)
+}
+
+logMessage(total(1, 2, 3, 4))
+
+const createError = (errMsg: string): never => {
+  throw new Error(errMsg)
+}
+
+const infinite = () => {
+  let i: number = 1
+  while (true) {
+    i++
+    if (i > 100) break
+  }
+}
+
+// Custom type guard
+const isNumber = (value: any): boolean => {
+  return typeof value === 'number'
+    ? true : false
+}
+
+
+// Use of the never type
+const numberOrString = (value: number | string): string => {
+  if (typeof value === 'string') return 'string'
+  if (isNumber(value)) return 'number'
+  return createError('This shold never happen!')
+}
