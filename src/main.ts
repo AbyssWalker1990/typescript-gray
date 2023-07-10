@@ -1,29 +1,21 @@
-let myName = 'Vova' // inferred as string
-let myName1: string = 'Vadim' // explicitly declare as string
-let myName3: string
+let stringArr = ['one', 'hey', 'Vova']
 
-// myName = 42 - will be error
-myName = 'Volodymyr'  // still can reassign to another string
+let guitars = ['Strat', 'Les Paul', 5190]
 
-let meaninigOfLife: number
-let isLoading: boolean
-meaninigOfLife = 42
-isLoading = true
+let mixedData = ['EVH', 1984, true]
 
-let album: any
-album = 'Van Helen'
-album = 1984
-album = false
+// stringArr[0] = 42 - error
+stringArr[0] = 'John'
+// stringArr.push(42) - error
+stringArr.push('hey')
 
-const sum = (a: number, b: string) => {
-  return a + b
-}
+guitars[0] = 1984
+guitars.unshift('Jim')
+// guitars.unshift(true) - error
 
-let album1: string | number  // union type
-album1 = 'string'
-// album1 = true  - error
+// stringArr = guitars - error
+// guitars = mixedData - error
+guitars = stringArr
+mixedData = guitars
 
-let postId: string | number
-let isActive: number | boolean
-
-
+let test = []
