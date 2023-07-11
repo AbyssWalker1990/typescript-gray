@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class Coder {
 
   secondLang!: string
@@ -121,3 +122,6 @@ console.log(MyBands.data)
 // MyBands.data = 'Van Helen' // Error
 MyBands.data = ['Van Helen'] // Working
 
+=======
+console.log('just testing')
+>>>>>>> main
